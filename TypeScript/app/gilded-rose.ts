@@ -44,15 +44,13 @@ export class GildedRose {
 
     let qualityDelta = 0;
     if (this.isAgedBrie(item) || this.isBackstagePass(item)) {
-      if (item.quality < 50) {
-        qualityDelta += 1;
-        if (this.isBackstagePass(item)) {
-          if (item.sellIn <= backstageThreshold2) {
-            qualityDelta += 1;
-          }
-          if (item.sellIn <= backstageThreshold3) {
-            qualityDelta += 1;
-          }
+      qualityDelta += 1;
+      if (this.isBackstagePass(item)) {
+        if (item.sellIn <= backstageThreshold2) {
+          qualityDelta += 1;
+        }
+        if (item.sellIn <= backstageThreshold3) {
+          qualityDelta += 1;
         }
       }
     } else {
