@@ -33,10 +33,28 @@ import { Item, GildedRose } from '@/gilded-rose';
 
  */
 
+const normalItem = 'normal';
+
 describe('Gilded Rose', () => {
   it('should foo', () => {
     const gildedRose = new GildedRose([new Item('foo', 0, 0)]);
     const items = gildedRose.updateQuality();
     expect(items[0].name).toBe('foo');
+  });
+
+  describe('When we have an item in stock', () => {
+    describe('When a day passes', () => {
+      it("Should decrease the item's SellIn", () => {
+        const gildedRose = new GildedRose([new Item(normalItem, 2, 2)]);
+        const afterUpdate = gildedRose.updateQuality();
+        expect(afterUpdate[0].sellIn).toBe(1);
+      });
+
+      it("Should decrease the item's Quality", () => {
+        const gildedRose = new GildedRose([new Item(normalItem, 2, 2)]);
+        const afterUpdate = gildedRose.updateQuality();
+        expect(afterUpdate[0].quality).toBe(1);
+      });
+    });
   });
 });
