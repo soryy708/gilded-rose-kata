@@ -17,10 +17,7 @@ import { Item, GildedRose } from '@/gilded-rose';
 /*
   Analysis of requirements:
   - Each day, SellIn and Quality decrease (except Aged Brie)
-  - SellIn <= 0 -> Quality decrease doubles
   - "Conjured" item -> Quality decrease doubles
-  - "Aged Brie" increases in quality each day
-  - "Aged Brie" & SellIn <= 0 -> Quality increase doubles
   - 0 < Quality <= 50
  */
 
