@@ -35,6 +35,8 @@ import { Item, GildedRose } from '@/gilded-rose';
 
 const agedBrie = 'Aged Brie';
 const normalItem = 'normal';
+const sulfuras = 'Sulfuras, Hand of Ragnaros';
+const legendaryItems = [sulfuras];
 
 describe('Gilded Rose', () => {
   it('should foo', () => {
@@ -103,6 +105,24 @@ describe('Gilded Rose', () => {
         const gildedRose = new GildedRose([new Item(normalItem, 0, 2)]);
         const afterUpdate = gildedRose.updateQuality();
         expect(afterUpdate[0].quality).toBe(0);
+      });
+    });
+  });
+
+  describe('When we have a legendary item', () => {
+    describe.each(legendaryItems)('When the item is %s', (item) => {
+      describe('When a day passes', () => {
+        it('Should not change sellIn', () => {
+          const gildedRose = new GildedRose([new Item(item, 10, 80)]);
+          const afterUpdate = gildedRose.updateQuality();
+          expect(afterUpdate[0].sellIn).toBe(10);
+        });
+
+        it('Should not change quality', () => {
+          const gildedRose = new GildedRose([new Item(item, 10, 80)]);
+          const afterUpdate = gildedRose.updateQuality();
+          expect(afterUpdate[0].quality).toBe(80);
+        });
       });
     });
   });
