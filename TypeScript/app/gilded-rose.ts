@@ -54,10 +54,8 @@ export class GildedRose {
         } else {
           if (this.isBackstagePass(item)) {
             item.quality = item.quality - item.quality;
-          } else {
-            if (!this.isLegendary(item)) {
-              item.quality = Math.max(item.quality - 1, 0);
-            }
+          } else if (!this.isLegendary(item)) {
+            item.quality = Math.max(item.quality - 1, 0);
           }
         }
       }
