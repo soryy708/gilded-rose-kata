@@ -156,7 +156,7 @@ describe('Gilded Rose', () => {
           expect(afterUpdate[0].sellIn).toBe(-1);
         });
 
-        it("Should decrease the item's Quality by 1", () => {
+        it("Should decrease the item's Quality by 2", () => {
           const gildedRose = new GildedRose([new Item(normalItem, 0, 2)]);
           const afterUpdate = gildedRose.updateQuality();
           expect(afterUpdate[0].quality).toBe(0);
