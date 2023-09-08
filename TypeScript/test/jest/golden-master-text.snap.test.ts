@@ -1,4 +1,4 @@
-import { printMasterText }  from '../golden-master-text-test';
+import { printMasterText }  from '../golden-master-text-test-api';
 
 const daysToSimulate = 30;
 
