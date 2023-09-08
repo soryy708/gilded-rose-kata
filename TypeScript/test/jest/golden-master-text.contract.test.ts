@@ -1,19 +1,10 @@
 import { printMasterText }  from '../golden-master-text-test';
 
-function buildFakeConsole(): jest.Mocked<typeof global.console> {
-    jest.spyOn(global.console, 'log');
-    return global.console as never;
-}
-
 describe('Gilded rose1', () => {
-    let fakeConsole: jest.Mocked<typeof global.console>;
-
-    beforeEach(() => {
-        fakeConsole = buildFakeConsole();
-    });
+    const fakeConsole = { log: jest.fn() };
 
     afterEach(() => {
-        jest.restoreAllMocks();
+        jest.resetAllMocks();
     });
 
     describe.each([...Array(10).keys()])('When days is %d', days => {
@@ -22,7 +13,7 @@ describe('Gilded rose1', () => {
         });
 
         beforeEach(() => {
-            printMasterText();
+            printMasterText(fakeConsole);
         })
 
         it('Should match snapshot', () => {
