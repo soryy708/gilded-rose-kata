@@ -45,10 +45,7 @@ export class GildedRose {
       } else if (!this.isLegendary(item)) {
         item.quality = Math.max(item.quality - 1, 0);
       }
-      if (!this.isLegendary(item)) {
-        item.sellIn = item.sellIn - 1;
-      }
-      if (item.sellIn < 0) {
+      if (item.sellIn <= 0) {
         if (this.isAgedBrie(item)) {
           item.quality = Math.min(item.quality + 1, 50);
         } else if (this.isBackstagePass(item)) {
@@ -56,6 +53,10 @@ export class GildedRose {
         } else if (!this.isLegendary(item)) {
           item.quality = Math.max(item.quality - 1, 0);
         }
+      }
+
+      if (!this.isLegendary(item)) {
+        item.sellIn = item.sellIn - 1;
       }
     }
 
