@@ -4,18 +4,21 @@ const agedBrie = 'Aged Brie';
 
 describe('Gilded Rose', () => {
   describe('When we have an Aged Brie item', () => {
-    describe('When we have a non-expired item in stock', () => {
+    describe('When expiration is in the future', () => {
+      const sellIn = 2;
+      const startValue = 2;
+
       describe('When a day passes', () => {
-        it("Should decrease the item's SellIn", () => {
-          const gildedRose = new GildedRose([new Item(agedBrie, 2, 2)]);
+        it('Should decrease SellIn by 1', () => {
+          const gildedRose = new GildedRose([new Item(agedBrie, sellIn, startValue)]);
           const afterUpdate = gildedRose.updateQuality();
-          expect(afterUpdate[0].sellIn).toBe(1);
+          expect(afterUpdate[0].sellIn).toBe(sellIn - 1);
         });
 
-        it("Should increase the item's Quality", () => {
-          const gildedRose = new GildedRose([new Item(agedBrie, 2, 2)]);
+        it('Should increase Quality by 1', () => {
+          const gildedRose = new GildedRose([new Item(agedBrie, sellIn, startValue)]);
           const afterUpdate = gildedRose.updateQuality();
-          expect(afterUpdate[0].quality).toBe(3);
+          expect(afterUpdate[0].quality).toBe(startValue + 1);
         });
       });
     });
