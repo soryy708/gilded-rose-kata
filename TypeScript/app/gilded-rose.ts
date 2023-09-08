@@ -51,12 +51,12 @@ export class GildedRose {
         if (this.isAgedBrie(item)) {
           item.quality = Math.min(item.quality + 1, 50);
         } else {
-          if (!this.isBackstagePass(item)) {
+          if (this.isBackstagePass(item)) {
+            item.quality = item.quality - item.quality;
+          } else {
             if (!this.isLegendary(item)) {
               item.quality = Math.max(item.quality - 1, 0);
             }
-          } else {
-            item.quality = item.quality - item.quality;
           }
         }
       }
