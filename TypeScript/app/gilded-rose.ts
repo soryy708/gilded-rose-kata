@@ -47,7 +47,7 @@ export class GildedRose {
     }
 
     let qualityDelta = 0;
-    if (this.isAgedBrie(item) || this.isBackstagePass(item)) {
+    if (this.increasesInValueOverTime(item)) {
       qualityDelta = 1;
       if (this.isBackstagePass(item)) {
         if (item.sellIn <= backstageThreshold2) {
@@ -86,5 +86,9 @@ export class GildedRose {
 
   private isExpired(item: Item): boolean {
     return item.sellIn <= 0;
+  }
+
+  private increasesInValueOverTime(item: Item): boolean {
+    return this.isAgedBrie(item) || this.isBackstagePass(item);
   }
 }
