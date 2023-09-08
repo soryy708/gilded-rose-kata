@@ -39,12 +39,6 @@ const sulfuras = 'Sulfuras, Hand of Ragnaros';
 const legendaryItems = [sulfuras];
 
 describe('Gilded Rose', () => {
-  it('should foo', () => {
-    const gildedRose = new GildedRose([new Item('foo', 0, 0)]);
-    const items = gildedRose.updateQuality();
-    expect(items[0].name).toBe('foo');
-  });
-
   describe('When we have a non-expired item in stock', () => {
     describe('When a day passes', () => {
       describe('When item is normal', () => {
