@@ -27,7 +27,7 @@ export class GildedRose {
 
   updateQuality() {
     for (const item of this.items) {
-      if (!this.isAgedBrie(item) && !this.isBackstagePass(item)) {
+      if (!(this.isAgedBrie(item) || this.isBackstagePass(item))) {
         if (!this.isLegendary(item)) {
           item.quality = Math.max(item.quality - 1, 0);
         }
