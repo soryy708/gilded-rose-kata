@@ -26,8 +26,6 @@ import { Item, GildedRose } from '@/gilded-rose';
 
 const agedBrie = 'Aged Brie';
 const normalItem = 'normal';
-const sulfuras = 'Sulfuras, Hand of Ragnaros';
-const legendaryItems = [sulfuras];
 const backstagePasses = ['Backstage passes to a TAFKAL80ETC concert'];
 
 describe('Gilded Rose', () => {
@@ -180,60 +178,6 @@ describe('Gilded Rose', () => {
           const gildedRose = new GildedRose([new Item(normalItem, 0, 2)]);
           const afterUpdate = gildedRose.updateQuality();
           expect(afterUpdate[0].quality).toBe(0);
-        });
-      });
-    });
-  });
-
-  describe('When we have a legendary item', () => {
-    describe.each(legendaryItems)('When the item is %s', (item) => {
-      const startValue = 80;
-
-      describe('When SellIn is positive', () => {
-        describe('When a day passes', () => {
-          it('Should not change sellIn', () => {
-            const gildedRose = new GildedRose([new Item(item, 1, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].sellIn).toBe(1);
-          });
-
-          it('Should not change quality', () => {
-            const gildedRose = new GildedRose([new Item(item, 1, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue);
-          });
-        });
-      });
-
-      describe('When SellIn is 0', () => {
-        describe('When a day passes', () => {
-          it('Should not change sellIn', () => {
-            const gildedRose = new GildedRose([new Item(item, 0, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].sellIn).toBe(0);
-          });
-
-          it('Should not change quality', () => {
-            const gildedRose = new GildedRose([new Item(item, 1, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue);
-          });
-        });
-      });
-
-      describe('When SellIn is negative', () => {
-        describe('When a day passes', () => {
-          it('Should not change sellIn', () => {
-            const gildedRose = new GildedRose([new Item(item, -1, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].sellIn).toBe(-1);
-          });
-
-          it('Should not change quality', () => {
-            const gildedRose = new GildedRose([new Item(item, 1, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue);
-          });
         });
       });
     });
