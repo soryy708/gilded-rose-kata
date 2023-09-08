@@ -55,12 +55,16 @@ export class GildedRose {
         }
       }
 
-      if (!this.isLegendary(item)) {
-        item.sellIn = item.sellIn - 1;
-      }
+      this.updateItemSellIn(item);
     }
 
     return this.items;
+  }
+
+  private updateItemSellIn(item: Item): void {
+    if (!this.isLegendary(item)) {
+      item.sellIn = item.sellIn - 1;
+    }
   }
 
   private isAgedBrie(item: Item): boolean {
