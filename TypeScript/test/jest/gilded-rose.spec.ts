@@ -43,7 +43,7 @@ describe('Gilded Rose', () => {
     expect(items[0].name).toBe('foo');
   });
 
-  describe('When we have a on-expired item in stock', () => {
+  describe('When we have a non-expired item in stock', () => {
     describe('When a day passes', () => {
       describe('When item is normal', () => {
         it("Should decrease the item's SellIn", () => {
