@@ -30,35 +30,38 @@ export class GildedRose {
 
   updateQuality() {
     for (const item of this.items) {
-      if (this.isAgedBrie(item) || this.isBackstagePass(item)) {
-        if (item.quality < 50) {
-          item.quality = item.quality + 1;
-          if (this.isBackstagePass(item)) {
-            if (item.sellIn <= backstageThreshold2) {
-              item.quality = Math.min(item.quality + 1, 50);
-            }
-            if (item.sellIn <= backstageThreshold3) {
-              item.quality = Math.min(item.quality + 1, 50);
-            }
-          }
-        }
-      } else if (!this.isLegendary(item)) {
-        item.quality = Math.max(item.quality - 1, 0);
-      }
-      if (item.sellIn <= 0) {
-        if (this.isAgedBrie(item)) {
-          item.quality = Math.min(item.quality + 1, 50);
-        } else if (this.isBackstagePass(item)) {
-          item.quality = item.quality - item.quality;
-        } else if (!this.isLegendary(item)) {
-          item.quality = Math.max(item.quality - 1, 0);
-        }
-      }
-
+      this.updateItemQuality(item);
       this.updateItemSellIn(item);
     }
 
     return this.items;
+  }
+
+  private updateItemQuality(item: Item): void {
+    if (this.isAgedBrie(item) || this.isBackstagePass(item)) {
+      if (item.quality < 50) {
+        item.quality = item.quality + 1;
+        if (this.isBackstagePass(item)) {
+          if (item.sellIn <= backstageThreshold2) {
+            item.quality = Math.min(item.quality + 1, 50);
+          }
+          if (item.sellIn <= backstageThreshold3) {
+            item.quality = Math.min(item.quality + 1, 50);
+          }
+        }
+      }
+    } else if (!this.isLegendary(item)) {
+      item.quality = Math.max(item.quality - 1, 0);
+    }
+    if (item.sellIn <= 0) {
+      if (this.isAgedBrie(item)) {
+        item.quality = Math.min(item.quality + 1, 50);
+      } else if (this.isBackstagePass(item)) {
+        item.quality = item.quality - item.quality;
+      } else if (!this.isLegendary(item)) {
+        item.quality = Math.max(item.quality - 1, 0);
+      }
+    }
   }
 
   private updateItemSellIn(item: Item): void {
