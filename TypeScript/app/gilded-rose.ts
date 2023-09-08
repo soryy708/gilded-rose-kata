@@ -51,7 +51,7 @@ export class GildedRose {
           }
         }
       }
-    } else if (!this.isLegendary(item)) {
+    } else {
       qualityDelta -= 1;
     }
     if (item.sellIn <= 0) {
@@ -59,7 +59,7 @@ export class GildedRose {
         qualityDelta += 1;
       } else if (this.isBackstagePass(item)) {
         qualityDelta = -1 * item.quality;
-      } else if (!this.isLegendary(item)) {
+      } else {
         qualityDelta -= 1;
       }
     }
