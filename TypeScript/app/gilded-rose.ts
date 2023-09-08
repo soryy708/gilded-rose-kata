@@ -61,7 +61,7 @@ export class GildedRose {
       qualityDelta = -1;
     }
     if (this.isExpired(item)) {
-      qualityDelta += this.isAgedBrie(item) ? 1 : -1;
+      qualityDelta *= 2;
     }
     item.quality = Math.min(50, Math.max(0, item.quality + qualityDelta));
   }
