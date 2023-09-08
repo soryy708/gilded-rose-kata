@@ -27,14 +27,14 @@ export class GildedRose {
 
   updateQuality() {
     for (const item of this.items) {
-      if (!this.isAgedBrie(item) && item.name != 'Backstage passes to a TAFKAL80ETC concert') {
+      if (!this.isAgedBrie(item) && !this.isBackstagePass(item)) {
         if (item.name != 'Sulfuras, Hand of Ragnaros') {
           item.quality = Math.max(item.quality - 1, 0);
         }
       } else {
         if (item.quality < 50) {
           item.quality = item.quality + 1;
-          if (item.name == 'Backstage passes to a TAFKAL80ETC concert') {
+          if (this.isBackstagePass(item)) {
             if (item.sellIn < 11) {
               item.quality = Math.min(item.quality + 1, 50);
             }
@@ -49,7 +49,7 @@ export class GildedRose {
       }
       if (item.sellIn < 0) {
         if (!this.isAgedBrie(item)) {
-          if (item.name != 'Backstage passes to a TAFKAL80ETC concert') {
+          if (!this.isBackstagePass(item)) {
             if (item.name != 'Sulfuras, Hand of Ragnaros') {
               item.quality = Math.max(item.quality - 1, 0);
             }
@@ -67,5 +67,9 @@ export class GildedRose {
 
   private isAgedBrie(item: Item): boolean {
     return item.name === 'Aged Brie';
+  }
+
+  private isBackstagePass(item: Item): boolean {
+    return item.name === 'Backstage passes to a TAFKAL80ETC concert';
   }
 }
