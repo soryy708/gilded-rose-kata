@@ -34,10 +34,10 @@ export class GildedRose {
         if (item.quality < 50) {
           item.quality = item.quality + 1;
           if (this.isBackstagePass(item)) {
-            if (item.sellIn < backstageThreshold2 + 1) {
+            if (item.sellIn <= backstageThreshold2) {
               item.quality = Math.min(item.quality + 1, 50);
             }
-            if (item.sellIn < backstageThreshold3 + 1) {
+            if (item.sellIn <= backstageThreshold3) {
               item.quality = Math.min(item.quality + 1, 50);
             }
           }
