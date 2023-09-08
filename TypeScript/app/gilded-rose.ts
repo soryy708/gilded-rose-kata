@@ -60,9 +60,11 @@ export class GildedRose {
     } else {
       qualityDelta = -1;
     }
+
     if (this.isExpired(item)) {
       qualityDelta *= 2;
     }
+
     item.quality = Math.min(50, Math.max(0, item.quality + qualityDelta));
   }
 
