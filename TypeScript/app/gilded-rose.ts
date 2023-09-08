@@ -50,12 +50,12 @@ export class GildedRose {
     if (this.isAgedBrie(item)) {
       qualityDelta = 1;
     } else if (this.isBackstagePass(item)) {
-      qualityDelta = 1;
-      if (item.sellIn <= backstageThreshold2) {
-        qualityDelta = 2;
-      }
       if (item.sellIn <= backstageThreshold3) {
         qualityDelta = 3;
+      } else if (item.sellIn <= backstageThreshold2) {
+        qualityDelta = 2;
+      } else {
+        qualityDelta = 1;
       }
     } else {
       qualityDelta = -1;
