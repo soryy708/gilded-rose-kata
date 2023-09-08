@@ -1,4 +1,4 @@
-import {printMasterText} from './golden-master-text-test-api'
+import { printMasterText } from './golden-master-text-test-api';
 
 let days: number = 2;
 if (process.argv.length > 2) {
