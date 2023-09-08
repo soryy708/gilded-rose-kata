@@ -26,7 +26,7 @@ import { Item, GildedRose } from '@/gilded-rose';
   - "Aged Brie" increases in quality each day
   - Legendary items (e.g. "Sulfuras") never decrases in quality
   - 0 < Quality <= 50
-  - "Backstage passes" e.g. "Aged Brie"
+  - "Backstage passes"
     - DaysToConcert <  0  -> Quality  = 0
     - DaysToConcert <= 5  -> Quality += 3
     - DaysToConcert <= 10 -> Quality += 2
@@ -37,7 +37,7 @@ const agedBrie = 'Aged Brie';
 const normalItem = 'normal';
 const sulfuras = 'Sulfuras, Hand of Ragnaros';
 const legendaryItems = [sulfuras];
-const backstagePasses = [agedBrie, 'Backstage passes to a TAFKAL80ETC concert'];
+const backstagePasses = ['Backstage passes to a TAFKAL80ETC concert'];
 
 describe('Gilded Rose', () => {
   describe('When we have a non-expired item in stock', () => {
@@ -245,19 +245,11 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          if (item === agedBrie) {
-            it('Should increase quality by 1', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 1);
-            });
-          } else {
-            it('Should increase quality by 2', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 2);
-            });
-          }
+          it('Should increase quality by 2', () => {
+            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+            const afterUpdate = gildedRose.updateQuality();
+            expect(afterUpdate[0].quality).toBe(startValue + 2);
+          });
         });
       });
 
@@ -271,19 +263,11 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          if (item === agedBrie) {
-            it('Should increase quality by 1', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 1);
-            });
-          } else {
-            it('Should increase quality by 2', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 2);
-            });
-          }
+          it('Should increase quality by 2', () => {
+            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+            const afterUpdate = gildedRose.updateQuality();
+            expect(afterUpdate[0].quality).toBe(startValue + 2);
+          });
         });
       });
 
@@ -297,19 +281,11 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          if (item === agedBrie) {
-            it('Should increase quality by 1', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 1);
-            });
-          } else {
-            it('Should increase quality by 3', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 3);
-            });
-          }
+          it('Should increase quality by 3', () => {
+            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+            const afterUpdate = gildedRose.updateQuality();
+            expect(afterUpdate[0].quality).toBe(startValue + 3);
+          });
         });
       });
 
@@ -323,19 +299,11 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          if (item === agedBrie) {
-            it('Should increase quality by 1', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 1);
-            });
-          } else {
-            it('Should increase quality by 3', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 3);
-            });
-          }
+          it('Should increase quality by 3', () => {
+            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+            const afterUpdate = gildedRose.updateQuality();
+            expect(afterUpdate[0].quality).toBe(startValue + 3);
+          });
         });
       });
 
@@ -349,19 +317,11 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          if (item === agedBrie) {
-            it('Should increase quality by 2', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 2);
-            });
-          } else {
-            it('Should set the quality to 0', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(0);
-            });
-          }
+          it('Should set the quality to 0', () => {
+            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+            const afterUpdate = gildedRose.updateQuality();
+            expect(afterUpdate[0].quality).toBe(0);
+          });
         });
       });
 
@@ -375,19 +335,11 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          if (item === agedBrie) {
-            it('Should increase quality by 2', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(startValue + 2);
-            });
-          } else {
-            it('Should set the quality to 0', () => {
-              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-              const afterUpdate = gildedRose.updateQuality();
-              expect(afterUpdate[0].quality).toBe(0);
-            });
-          }
+          it('Should set the quality to 0', () => {
+            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+            const afterUpdate = gildedRose.updateQuality();
+            expect(afterUpdate[0].quality).toBe(0);
+          });
         });
       });
     });
