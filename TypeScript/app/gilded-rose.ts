@@ -56,7 +56,7 @@ export class GildedRose {
     } else {
       qualityDelta -= 1;
     }
-    if (item.sellIn <= 0) {
+    if (this.isExpired(item)) {
       if (this.isAgedBrie(item)) {
         qualityDelta += 1;
       } else if (this.isBackstagePass(item)) {
@@ -84,5 +84,9 @@ export class GildedRose {
 
   private isLegendary(item: Item): boolean {
     return item.name === 'Sulfuras, Hand of Ragnaros';
+  }
+
+  private isExpired(item: Item): boolean {
+    return item.sellIn <= 0;
   }
 }
