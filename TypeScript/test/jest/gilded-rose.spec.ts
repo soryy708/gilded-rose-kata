@@ -21,7 +21,7 @@ import { Item, GildedRose } from '@/gilded-rose';
 /*
   Analysis of requirements:
   - Each day, SellIn and Quality decrease (except Aged Brie)
-  - SellIn < 0 -> Quality decrease doubles
+  - SellIn <= 0 -> Quality decrease doubles
   - "Conjured" item -> Quality decrease doubles
   - "Aged Brie" increases in quality each day
   - Legendary items (e.g. "Sulfuras") never decrases in quality
@@ -43,7 +43,7 @@ describe('Gilded Rose', () => {
     expect(items[0].name).toBe('foo');
   });
 
-  describe('When we have an item in stock', () => {
+  describe('When we have a on-expired item in stock', () => {
     describe('When a day passes', () => {
       describe('When item is normal', () => {
         it("Should decrease the item's SellIn", () => {
@@ -71,6 +71,38 @@ describe('Gilded Rose', () => {
           const afterUpdate = gildedRose.updateQuality();
           expect(afterUpdate[0].quality).toBe(3);
         });
+      });
+    });
+  });
+
+  describe('When we have an expiring item in stock', () => {
+    describe('When a day passes', () => {
+      it("Should decrease the item's SellIn", () => {
+        const gildedRose = new GildedRose([new Item(normalItem, 1, 2)]);
+        const afterUpdate = gildedRose.updateQuality();
+        expect(afterUpdate[0].sellIn).toBe(0);
+      });
+
+      it("Should decrease the item's Quality by 1", () => {
+        const gildedRose = new GildedRose([new Item(normalItem, 1, 2)]);
+        const afterUpdate = gildedRose.updateQuality();
+        expect(afterUpdate[0].quality).toBe(1);
+      });
+    });
+  });
+
+  describe('When we have an expired item in stock', () => {
+    describe('When a day passes', () => {
+      it("Should decrease the item's SellIn", () => {
+        const gildedRose = new GildedRose([new Item(normalItem, 0, 2)]);
+        const afterUpdate = gildedRose.updateQuality();
+        expect(afterUpdate[0].sellIn).toBe(-1);
+      });
+
+      it("Should decrease the item's Quality by 1", () => {
+        const gildedRose = new GildedRose([new Item(normalItem, 0, 2)]);
+        const afterUpdate = gildedRose.updateQuality();
+        expect(afterUpdate[0].quality).toBe(0);
       });
     });
   });
