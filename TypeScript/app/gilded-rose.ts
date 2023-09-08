@@ -58,7 +58,7 @@ export class GildedRose {
         }
       }
     } else {
-      qualityDelta -= 1;
+      qualityDelta = -1;
     }
     if (this.isExpired(item)) {
       qualityDelta += this.isAgedBrie(item) ? 1 : -1;
