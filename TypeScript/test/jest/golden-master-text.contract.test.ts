@@ -9,11 +9,7 @@ describe('Gilded rose1', () => {
 
     describe.each([...Array(10).keys()])('When days is %d', days => {
         beforeEach(() => {
-            process.argv = ['', '', `${days}`];
-        });
-
-        beforeEach(() => {
-            printMasterText(fakeConsole);
+            printMasterText(days, fakeConsole);
         })
 
         it('Should match snapshot', () => {
