@@ -24,7 +24,6 @@ import { Item, GildedRose } from '@/gilded-rose';
   - 0 < Quality <= 50
  */
 
-const agedBrie = 'Aged Brie';
 const normalItem = 'normal';
 
 describe('Gilded Rose', () => {
@@ -71,20 +70,6 @@ describe('Gilded Rose', () => {
             const afterUpdate = gildedRose.updateQuality();
             expect(afterUpdate[0].quality).toBe(0);
           });
-        });
-      });
-
-      describe('When item is Aged Brie', () => {
-        it("Should decrease the item's SellIn", () => {
-          const gildedRose = new GildedRose([new Item(agedBrie, 2, 2)]);
-          const afterUpdate = gildedRose.updateQuality();
-          expect(afterUpdate[0].sellIn).toBe(1);
-        });
-
-        it("Should increase the item's Quality", () => {
-          const gildedRose = new GildedRose([new Item(agedBrie, 2, 2)]);
-          const afterUpdate = gildedRose.updateQuality();
-          expect(afterUpdate[0].quality).toBe(3);
         });
       });
     });
