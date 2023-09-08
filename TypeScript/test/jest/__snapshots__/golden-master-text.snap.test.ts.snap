@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gilded rose1 When days is 0 Should match snapshot 1`] = `[]`;
+exports[`Gilded Rose When days is 0 Should match snapshot 1`] = `[]`;
 
-exports[`Gilded rose1 When days is 1 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 1 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -19,7 +19,7 @@ exports[`Gilded rose1 When days is 1 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 2 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 2 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -48,7 +48,7 @@ exports[`Gilded rose1 When days is 2 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 3 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 3 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -89,7 +89,7 @@ exports[`Gilded rose1 When days is 3 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 4 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 4 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -142,7 +142,7 @@ exports[`Gilded rose1 When days is 4 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 5 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 5 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -207,7 +207,7 @@ exports[`Gilded rose1 When days is 5 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 6 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 6 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -284,7 +284,7 @@ exports[`Gilded rose1 When days is 6 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 7 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 7 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -373,7 +373,7 @@ exports[`Gilded rose1 When days is 7 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 8 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 8 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -474,7 +474,7 @@ exports[`Gilded rose1 When days is 8 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 9 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 9 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -587,7 +587,7 @@ exports[`Gilded rose1 When days is 9 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 10 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 10 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -712,7 +712,7 @@ exports[`Gilded rose1 When days is 10 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 11 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 11 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -849,7 +849,7 @@ exports[`Gilded rose1 When days is 11 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 12 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 12 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -998,7 +998,7 @@ exports[`Gilded rose1 When days is 12 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 13 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 13 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -1159,7 +1159,7 @@ exports[`Gilded rose1 When days is 13 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 14 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 14 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -1332,7 +1332,7 @@ exports[`Gilded rose1 When days is 14 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 15 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 15 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -1517,7 +1517,7 @@ exports[`Gilded rose1 When days is 15 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 16 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 16 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -1714,7 +1714,7 @@ exports[`Gilded rose1 When days is 16 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 17 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 17 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -1923,7 +1923,7 @@ exports[`Gilded rose1 When days is 17 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 18 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 18 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -2144,7 +2144,7 @@ exports[`Gilded rose1 When days is 18 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 19 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 19 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -2377,7 +2377,7 @@ exports[`Gilded rose1 When days is 19 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 20 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 20 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -2622,7 +2622,7 @@ exports[`Gilded rose1 When days is 20 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 21 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 21 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -2879,7 +2879,7 @@ exports[`Gilded rose1 When days is 21 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 22 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 22 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -3148,7 +3148,7 @@ exports[`Gilded rose1 When days is 22 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 23 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 23 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -3429,7 +3429,7 @@ exports[`Gilded rose1 When days is 23 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 24 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 24 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -3722,7 +3722,7 @@ exports[`Gilded rose1 When days is 24 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 25 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 25 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -4027,7 +4027,7 @@ exports[`Gilded rose1 When days is 25 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 26 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 26 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -4344,7 +4344,7 @@ exports[`Gilded rose1 When days is 26 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 27 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 27 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -4673,7 +4673,7 @@ exports[`Gilded rose1 When days is 27 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 28 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 28 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -5014,7 +5014,7 @@ exports[`Gilded rose1 When days is 28 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 29 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 29 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",
@@ -5367,7 +5367,7 @@ exports[`Gilded rose1 When days is 29 Should match snapshot 1`] = `
 ]
 `;
 
-exports[`Gilded rose1 When days is 30 Should match snapshot 1`] = `
+exports[`Gilded Rose When days is 30 Should match snapshot 1`] = `
 [
   "-------- day 0 --------",
   "name, sellIn, quality",

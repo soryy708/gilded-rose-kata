@@ -2,7 +2,7 @@ import { printMasterText }  from '../golden-master-text-test';
 
 const daysToSimulate = 30;
 
-describe('Gilded rose1', () => {
+describe('Gilded Rose', () => {
     const fakeConsole = { log: jest.fn() };
 
     afterEach(() => {
