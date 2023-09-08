@@ -84,10 +84,10 @@ export class GildedRose {
     return item.sellIn <= 0;
   }
 
-  private getBackstagePassQualityIncrease(sellIn: number): number {
-    if (sellIn <= backstageThreshold3) {
+  private getBackstagePassQualityIncrease(daysUntilConcert: number): number {
+    if (daysUntilConcert <= backstageThreshold3) {
       return 3;
-    } else if (sellIn <= backstageThreshold2) {
+    } else if (daysUntilConcert <= backstageThreshold2) {
       return 2;
     } else {
       return 1;
