@@ -38,6 +38,10 @@ export class GildedRose {
   }
 
   private updateItemQuality(item: Item): void {
+    if (this.isLegendary(item)) {
+      return;
+    }
+
     let qualityDelta = 0;
     if (this.isAgedBrie(item) || this.isBackstagePass(item)) {
       if (item.quality < 50) {
@@ -63,9 +67,7 @@ export class GildedRose {
         qualityDelta -= 1;
       }
     }
-    if (!this.isLegendary(item)) {
-      item.quality = Math.min(50, Math.max(0, item.quality + qualityDelta));
-    }
+    item.quality = Math.min(50, Math.max(0, item.quality + qualityDelta));
   }
 
   private updateItemSellIn(item: Item): void {
