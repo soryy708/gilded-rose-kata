@@ -1,3 +1,6 @@
+const backstageThreshold2 = 10;
+const backstageThreshold3 = 5;
+
 /**
  * Owned by goblin in corner
  * Do not alter!
@@ -31,10 +34,10 @@ export class GildedRose {
         if (item.quality < 50) {
           item.quality = item.quality + 1;
           if (this.isBackstagePass(item)) {
-            if (item.sellIn < 11) {
+            if (item.sellIn < backstageThreshold2 + 1) {
               item.quality = Math.min(item.quality + 1, 50);
             }
-            if (item.sellIn < 6) {
+            if (item.sellIn < backstageThreshold3 + 1) {
               item.quality = Math.min(item.quality + 1, 50);
             }
           }
