@@ -9,7 +9,6 @@ import { Item, GildedRose } from '@/gilded-rose';
 	- The Quality of an item is never negative
 	- "Aged Brie" actually increases in Quality the older it gets
 	- The Quality of an item is never more than 50
-	- "Sulfuras", being a legendary item, never has to be sold or decreases in Quality
   - "Conjured" items degrade in Quality twice as fast as normal items
   Just for clarification, an item can never have its Quality increase above 50, however "Sulfuras" is a
   legendary item and as such its Quality is 80 and it never alters.
@@ -22,7 +21,6 @@ import { Item, GildedRose } from '@/gilded-rose';
   - "Conjured" item -> Quality decrease doubles
   - "Aged Brie" increases in quality each day
   - "Aged Brie" & SellIn <= 0 -> Quality increase doubles
-  - Legendary items (e.g. "Sulfuras") never decrases in quality
   - 0 < Quality <= 50
  */
 
