@@ -1,3 +1,7 @@
+/**
+ * Owned by goblin in corner
+ * Do not alter!
+ */
 export class Item {
   name: string;
   sellIn: number;
@@ -11,6 +15,10 @@ export class Item {
 }
 
 export class GildedRose {
+  /**
+   * Owned by goblin in corner.
+   * Do not alter!
+   */
   items: Array<Item>;
 
   constructor(items = [] as Array<Item>) {
