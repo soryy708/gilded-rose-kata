@@ -47,15 +47,15 @@ export class GildedRose {
     }
 
     let qualityDelta = 0;
-    if (this.increasesInValueOverTime(item)) {
+    if (this.isAgedBrie(item)) {
       qualityDelta = 1;
-      if (this.isBackstagePass(item)) {
-        if (item.sellIn <= backstageThreshold2) {
-          qualityDelta = 2;
-        }
-        if (item.sellIn <= backstageThreshold3) {
-          qualityDelta = 3;
-        }
+    } else if (this.isBackstagePass(item)) {
+      qualityDelta = 1;
+      if (item.sellIn <= backstageThreshold2) {
+        qualityDelta = 2;
+      }
+      if (item.sellIn <= backstageThreshold3) {
+        qualityDelta = 3;
       }
     } else {
       qualityDelta = -1;
@@ -86,9 +86,5 @@ export class GildedRose {
 
   private isExpired(item: Item): boolean {
     return item.sellIn <= 0;
-  }
-
-  private increasesInValueOverTime(item: Item): boolean {
-    return this.isAgedBrie(item) || this.isBackstagePass(item);
   }
 }
