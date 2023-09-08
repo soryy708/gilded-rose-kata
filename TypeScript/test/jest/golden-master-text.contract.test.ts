@@ -1,5 +1,7 @@
 import { printMasterText }  from '../golden-master-text-test';
 
+const daysToSimulate = 30;
+
 describe('Gilded rose1', () => {
     const fakeConsole = { log: jest.fn() };
 
@@ -7,7 +9,7 @@ describe('Gilded rose1', () => {
         jest.resetAllMocks();
     });
 
-    describe.each([...Array(10).keys()])('When days is %d', days => {
+    describe.each([...Array(daysToSimulate + 1).keys()])('When days is %d', days => {
         beforeEach(() => {
             printMasterText(days, fakeConsole);
         })
