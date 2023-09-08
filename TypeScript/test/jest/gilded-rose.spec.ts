@@ -220,10 +220,22 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          it('Should increase quality by 1', () => {
-            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue + 1);
+          describe('When the value is less than 50', () => {
+            it('Should increase quality by 1', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 1);
+            });
+          });
+
+          describe('When the value is 50', () => {
+            const startValue = 50;
+
+            it("Shouldn't change the value", () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue);
+            });
           });
         });
       });
@@ -238,10 +250,32 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          it('Should increase quality by 2', () => {
-            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue + 2);
+          describe('When the value is less than 49', () => {
+            it('Should increase quality by 2', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 2);
+            });
+          });
+
+          describe('When the value is 49', () => {
+            const startValue = 49;
+
+            it('Should increase quality by 1', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 1);
+            });
+          });
+
+          describe('When the value is 50', () => {
+            const startValue = 50;
+
+            it("Shouldn't change the value", () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue);
+            });
           });
         });
       });
@@ -256,10 +290,32 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          it('Should increase quality by 2', () => {
-            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue + 2);
+          describe('When the value is less than 49', () => {
+            it('Should increase quality by 2', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 2);
+            });
+          });
+
+          describe('When the value is 49', () => {
+            const startValue = 49;
+
+            it('Should increase quality by 1', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 1);
+            });
+          });
+
+          describe('When the value is 50', () => {
+            const startValue = 50;
+
+            it("Shouldn't change the value", () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue);
+            });
           });
         });
       });
@@ -274,10 +330,42 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          it('Should increase quality by 3', () => {
-            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue + 3);
+          describe('When the value is less than 48', () => {
+            it('Should increase quality by 3', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 3);
+            });
+          });
+
+          describe('When the value is 48', () => {
+            const startValue = 48;
+
+            it('Should increase quality by 2', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 2);
+            });
+          });
+
+          describe('When the value is 49', () => {
+            const startValue = 49;
+
+            it('Should increase quality by 1', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 1);
+            });
+          });
+
+          describe('When the value is 50', () => {
+            const startValue = 50;
+
+            it("Shouldn't change the value", () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue);
+            });
           });
         });
       });
@@ -292,10 +380,42 @@ describe('Gilded Rose', () => {
             expect(afterUpdate[0].sellIn).toBe(daysToConcert - 1);
           });
 
-          it('Should increase quality by 3', () => {
-            const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
-            const afterUpdate = gildedRose.updateQuality();
-            expect(afterUpdate[0].quality).toBe(startValue + 3);
+          describe('When the value is less than 48', () => {
+            it('Should increase quality by 3', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 3);
+            });
+          });
+
+          describe('When the value is 48', () => {
+            const startValue = 48;
+
+            it('Should increase quality by 2', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 2);
+            });
+          });
+
+          describe('When the value is 49', () => {
+            const startValue = 49;
+
+            it('Should increase quality by 1', () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue + 1);
+            });
+          });
+
+          describe('When the value is 50', () => {
+            const startValue = 50;
+
+            it("Shouldn't change the value", () => {
+              const gildedRose = new GildedRose([new Item(item, daysToConcert, startValue)]);
+              const afterUpdate = gildedRose.updateQuality();
+              expect(afterUpdate[0].quality).toBe(startValue);
+            });
           });
         });
       });
