@@ -41,6 +41,10 @@ export class GildedRose {
     if (this.isLegendary(item)) {
       return;
     }
+    if (this.isBackstagePass(item) && this.isExpired(item)) {
+      item.quality = 0;
+      return;
+    }
 
     let qualityDelta = 0;
     if (this.isAgedBrie(item) || this.isBackstagePass(item)) {
