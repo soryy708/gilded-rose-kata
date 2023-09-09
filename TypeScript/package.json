@@ -7,15 +7,22 @@
     "compile": "tsc",
     "pretest": "rimraf app/**/*.js test/**/*.js",
     "test:jest": "jest",
-    "test:jest:watch": "jest --watchAll"
+    "test:jest:watch": "jest --watchAll",
+    "lint": "eslint .",
+    "format": "prettier . --write"
   },
   "license": "MIT",
   "private": true,
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
     "jest": "^29.4.3",
     "nyc": "~15.1.0",
+    "prettier": "3.0.3",
     "rimraf": "^4.1.2",
     "source-map-support": "^0.5.20",
     "ts-jest": "^29.0.5",
