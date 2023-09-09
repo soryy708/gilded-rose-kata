@@ -55,6 +55,9 @@ export class GildedRose {
       qualityDelta = -1;
     }
 
+    if (this.isConjured(item)) {
+      qualityDelta *= 2;
+    }
     if (this.isExpired(item)) {
       qualityDelta *= 2;
     }
@@ -78,6 +81,10 @@ export class GildedRose {
 
   private isLegendary(item: Item): boolean {
     return item.name === 'Sulfuras, Hand of Ragnaros';
+  }
+
+  private isConjured(item: Item): boolean {
+    return item.name === 'conjured';
   }
 
   private isExpired(item: Item): boolean {
